@@ -1,5 +1,4 @@
 # 🧮 Discrete Mathematics: Chapter 1 Logic
-
 ## 📑 Table of Contents
 
 0. [Chapter Overview](#-0-chapter-overview)
@@ -12,7 +11,7 @@
 7. [Negation in Logic](#-7-negation-in-logic)
 8. [Practice Questions](#-8-practice-questions)
 9. [Cheat Sheet and Exam Checklist](#-9-cheat-sheet-and-exam-checklist)
-10. [Slide Index and Study Tracker](#-10-slide-index-and-study-tracker)
+10. [Study Tracker](#-10-study-tracker)
 
 **Symbols used:** `∧` AND · `∨` OR · `→` implies · `↔` if and only if · `¬` or `~` NOT · `⊕` XOR · `≡` or `⇔` logically equivalent · `∴` therefore · `T` true · `F` false
 
@@ -20,9 +19,7 @@
 
 ## 🧭 0. Chapter Overview
 
-📺 **Slides 1–5**
-
-### Learning outcomes (slide 2)
+### Learning outcomes
 
 By the end of this chapter you should be able to:
 
@@ -36,14 +33,14 @@ By the end of this chapter you should be able to:
 | 6 | Identify laws of logic | [Section 5](#-5-logic-laws) |
 | 7 | Learn the 4 rules of inference | [Section 6](#-6-rules-of-inference) |
 
-### What is logic? (slide 3)
+### What is logic?
 
 - Logic is the **study of reasoning**. It focuses on whether an argument is correct or not.
 - It is widely used in **philosophy, mathematics and computer science**.
 - It is a **tool for telling the true from the false**.
 - It is often called the **"calculus of computer science"** because it is fundamental to designing algorithms, programming languages and software systems.
 
-### Where logic is used (slide 4)
+### Where logic is used
 
 | Area | How logic shows up |
 |---|---|
@@ -53,7 +50,7 @@ By the end of this chapter you should be able to:
 | **Cryptography** | XOR, the same `⊕` operator used in my cryptography notes. |
 | **Circuit design** | Logic gates (AND, OR, NOT, XOR) are the connectives built in hardware. |
 
-### Key components of logic (slide 5)
+### Key components of logic
 
 The chapter is built from four parts, and each later section follows this order:
 
@@ -74,13 +71,11 @@ for p, q in product([True, False], repeat=2):
     print(p, q, (not p) or q)        # this tests  ¬p ∨ q
 ```
 
-Use `and`, `or`, `not`, and `(not p) or q` for `p → q`. The rows come out in the same order as the slides: TT, TF, FT, FF.
+Use `and`, `or`, `not`, and `(not p) or q` for `p → q`. The rows come out in the same order as the lecture: TT, TF, FT, FF.
 
 ---
 
 ## 💡 1. Propositions
-
-📺 **Slides 6–14**
 
 > A **proposition** is a **declarative statement** that is **either true or false, but not both**. In other words, it has a **well-defined truth value**.
 
@@ -97,16 +92,16 @@ Use `and`, `or`, `not`, and `(not p) or q` for `p → q`. The rows come out in t
 
 Every proposition is a statement, but **not every statement is a proposition**. A statement can fail to be a proposition when its truth value depends on a variable that has not been given a value.
 
-### The lecturer's six examples (slides 7–12)
+### The lecturer's six examples
 
-| Slide | Sentence | Statement? | Proposition? | Truth value | Why |
+| # | Sentence | Statement? | Proposition? | Truth value | Why |
 |:-:|---|:-:|:-:|:-:|---|
-| 7 | Currency of Malaysia is Ringgit. | Yes | **Yes** | **True** | Definite and correct. |
-| 8 | 3 + 4 = 8 | Yes | **Yes** | **False** | False, but it still has a definite truth value. |
-| 9 | "y > 5" | Yes | **No** | Cannot determine | Depends on `y`, and `y` is not specified. |
-| 10 | x + y > 10 | Yes | **No** | No truth value | Depends on `x` and `y`, which are not specified. |
-| 11 | What day is today? | **No** | **No** | No truth value | It is a question, not a declaration. |
-| 12 | x < y if and only if y > x. | Yes | **Yes** | **True** | True **whatever** `x` and `y` are, so its truth value does not depend on specific values. |
+| 1 | Currency of Malaysia is Ringgit. | Yes | **Yes** | **True** | Definite and correct. |
+| 2 | 3 + 4 = 8 | Yes | **Yes** | **False** | False, but it still has a definite truth value. |
+| 3 | "y > 5" | Yes | **No** | Cannot determine | Depends on `y`, and `y` is not specified. |
+| 4 | x + y > 10 | Yes | **No** | No truth value | Depends on `x` and `y`, which are not specified. |
+| 5 | What day is today? | **No** | **No** | No truth value | It is a question, not a declaration. |
+| 6 | x < y if and only if y > x. | Yes | **Yes** | **True** | True **whatever** `x` and `y` are, so its truth value does not depend on specific values. |
 
 ### 🧠 Understanding it
 
@@ -115,7 +110,7 @@ Ask one question: **"Can I sensibly say 'that is true' or 'that is false'?"**
 - **Yes, and there is a definite answer** → proposition (even if it is false, like `3 + 4 = 8`).
 - **It depends on an unknown value** (`y > 5`) → not a proposition yet. Give `y` a value (say `y = 9`) and it becomes one.
 - **It is a question, command or suggestion** → not a proposition, because it does not claim anything.
-- **Slide 12 is the tricky one.** It contains `x` and `y`, but the statement is true for *every* choice of them, so it still has a single truth value.
+- **The last example (`x < y` if and only if `y > x`) is the tricky one.** It contains `x` and `y`, but the statement is true for *every* choice of them, so it still has a single truth value.
 
 | Sentence | Proposition? | Reason |
 |---|:-:|---|
@@ -126,7 +121,7 @@ Ask one question: **"Can I sensibly say 'that is true' or 'that is false'?"**
 | x + 2 = 5 | ❌ | Depends on `x` |
 | This sentence is false | ❌ | Paradox: it cannot be given a truth value |
 
-### ✏️ Exercise (slide 13) and truth values (slide 14)
+### ✏️ Exercise: which are propositions?
 
 Which of these are propositions?
 
@@ -149,15 +144,13 @@ Which of these are propositions?
 | 5 | ❌ **No** | A command. |
 | 6 | ✅ **Yes, and it is false** | Counterexample: 2 + 3 = 5 is odd. (3 + 5 = 8 is even, but one counterexample is enough to make "the sum is always even" false.) |
 
-Slide 14 shows the working for items 1, 2 and 6. Items 3 to 5 follow the same test: commands and suggestions have no truth value.
+Items 3 to 5 follow the same test: commands and suggestions have no truth value.
 
 </details>
 
 ---
 
 ## 🔧 2. Logical Operators (Connectives)
-
-📺 **Slides 15–22**
 
 Propositions are written with letters such as `p`, `q`, `r`, `s`, and combined using **6 logical operators**. **Truth tables** show how each operator combines propositions into compound propositions.
 
@@ -179,7 +172,7 @@ Propositions are written with letters such as `p`, `q`, `r`, `s`, and combined u
 | `¬p` | `1 − p` |
 | `p ⊕ q` | addition without carry (`1 + 1 = 0`), the same XOR as in my cryptography notes |
 
-### ❌ Negation (NOT): `¬p` or `~p` (slide 16)
+### ❌ Negation (NOT): `¬p` or `~p`
 
 A **unary** operator (works on one proposition). It flips the truth value.
 
@@ -191,7 +184,7 @@ A **unary** operator (works on one proposition). It flips the truth value.
 | T | F |
 | F | T |
 
-### ➕ Conjunction (AND): `p ∧ q` (slide 17)
+### ➕ Conjunction (AND): `p ∧ q`
 
 A **binary** operator. True only when **both** are true. One failure ruins the whole thing.
 
@@ -208,7 +201,7 @@ A **binary** operator. True only when **both** are true. One failure ruins the w
 
 If I have the salad but skip the fried mee, the promise "salad **and** fried mee" is broken, so it is false.
 
-### 🔀 Disjunction (OR): `p ∨ q` (slide 18)
+### 🔀 Disjunction (OR): `p ∨ q`
 
 True if **at least one** is true. It only fails when **both** are false.
 
@@ -225,7 +218,7 @@ True if **at least one** is true. It only fails when **both** are false.
 
 > 📌 Logic's OR is **inclusive**: "both true" counts as true. In everyday English, "tea or coffee?" usually means one only. That meaning is **XOR**.
 
-### ⚡ Exclusive Or (XOR): `p ⊕ q` (slide 19)
+### ⚡ Exclusive Or (XOR): `p ⊕ q`
 
 The exclusive or ensures that **only one of them can be true at a time, but not both**. Think "they are different".
 
@@ -244,7 +237,7 @@ Equivalent forms: `p ⊕ q ≡ (p ∨ q) ∧ ¬(p ∧ q) ≡ ¬(p ↔ q)`
 
 > 🔗 Compare OR and XOR: they differ only in the **first row** (both true). OR gives T, XOR gives F.
 
-### ➡️ Implication (if – then): `p → q` (slide 20)
+### ➡️ Implication (if – then): `p → q`
 
 `p` is the **hypothesis** (the "if" part, also called the antecedent). `q` is the **conclusion** (the "then" part, also called the consequent).
 
@@ -297,7 +290,7 @@ For `P → Q` = *"If you study hard, you will get a good grade"*:
 
 The contrapositive is the basis of **Modus Tollens** (section 6).
 
-### 🔁 Biconditional (if and only if): `p ↔ q` (slide 21)
+### 🔁 Biconditional (if and only if): `p ↔ q`
 
 - `P` = you can take the flight
 - `Q` = you buy a ticket
@@ -310,7 +303,7 @@ The contrapositive is the basis of **Modus Tollens** (section 6).
 | F | T | F |
 | F | F | **T** |
 
-**Rule to remember (from the slide):**
+**Rule to remember (from the lecture):**
 
 - **Same** truth values (T,T or F,F) → **T**
 - **Different** truth values (T,F or F,T) → **F**
@@ -321,7 +314,7 @@ It is a **two-way promise**: `p ↔ q ≡ (p → q) ∧ (q → p)`. It is also t
 
 From highest to lowest: **`¬`, then `∧`, then `∨`, then `→`, then `↔`**. Conventions can vary between lecturers, so **use brackets** when unsure. For example, `¬p ∧ q` means `(¬p) ∧ q`, not `¬(p ∧ q)`.
 
-### ✏️ Slide 22: which is the correct truth table for `¬p ∨ q`?
+### ✏️ Which is the correct truth table for `¬p ∨ q`?
 
 Four tables are offered (rows are TT, TF, FT, FF, in that order):
 
@@ -332,7 +325,7 @@ Four tables are offered (rows are TT, TF, FT, FF, in that order):
 | F | T | T | F | T | T |
 | F | F | F | T | T | T |
 
-Hint from the slide: **look at the values of p and q that make `¬p ∨ q` false.**
+Hint from the lecture: **look at the values of p and q that make `¬p ∨ q` false.**
 
 <details>
 <summary>Answer: table 3</summary>
@@ -361,11 +354,9 @@ Notice this column is the same as `p → q`. That is the rewrite `p → q ≡ ¬
 
 ## 🧩 3. Compound Propositions
 
-📺 **Slides 23–25**
-
 One or more propositions can be combined to form a single **compound proposition**.
 
-**Example (slide 23)**
+**Example**
 
 - `m`: Roses are red
 - `n`: Roses are blue
@@ -380,11 +371,11 @@ One or more propositions can be combined to form a single **compound proposition
 
 For 3 variables the row order is `TTT, TTF, TFT, TFF, FTT, FTF, FFT, FFF`.
 
-### ✏️ Slide 24, Question 1
+### ✏️ Example Question 1
 
 *Show that the statement forms `¬(p ∧ q)` and `¬p ∧ ¬q` are **not** logically equivalent.*
 
-> Note on the slide: two statements are logically equivalent only if **both columns have exactly the same truth values**.
+> Note in the lecture: two statements are logically equivalent only if **both columns have exactly the same truth values**.
 
 <details>
 <summary>Answer</summary>
@@ -402,7 +393,7 @@ The correct De Morgan's law is `¬(p ∧ q) ≡ ¬p ∨ ¬q`. The `∧` becomes 
 
 </details>
 
-### ✏️ Slide 24, Question 2
+### ✏️ Example Question 2
 
 *Construct the truth table for `(p ∨ q) ∧ ¬(p ∧ q)`.*
 
@@ -420,7 +411,7 @@ The result column (`F, T, T, F`) is identical to **XOR**, so `(p ∨ q) ∧ ¬(p
 
 </details>
 
-### ✏️ Slide 24, Question 3
+### ✏️ Example Question 3
 
 *Write the following sentences symbolically, letting `h` = "It is hot" and `s` = "It is sunny".*
 
@@ -437,7 +428,7 @@ b) **`h ∨ s`**
 
 </details>
 
-### ✏️ Slide 25: translating sentences into symbols
+### ✏️ Translating sentences into symbols
 
 Given `P` = It is raining and `Q` = the grass is wet, write these using logical connectives:
 
@@ -514,17 +505,15 @@ It is false only when `p` and `q` are true and `r` is false (the one way to brea
 
 ## 🎯 4. Tautologies, Contradictions and Contingencies
 
-📺 **Slides 26–31**
-
 | Type | Definition | Result column |
 |---|---|---|
 | **Tautology** | A logical statement that is **always true**. No matter what values you assign to the variables, the outcome is always true. | **All T** |
 | **Contradiction** | A logical statement that is **always false**. No matter what values you assign to the variables, the outcome is always false. | **All F** |
 | **Contingency** | **Neither** always true nor always false. It can be true in some cases and false in others. | **A mixture of T and F** |
 
-> 🎓 **"Remember this for your exam" (slide 31):** Tautology: all or always **T**. Contradiction: all or always **F**. Contingency: a **mixture** of T and F.
+> 🎓 **Remember this for your exam:** Tautology: all or always **T**. Contradiction: all or always **F**. Contingency: a **mixture** of T and F.
 
-### Slide 27: Tautology (always true): `p ∨ ¬p`
+### Tautology (always true): `p ∨ ¬p`
 
 Let `p`: Today is Friday. The statement is *"Today is Friday, or today is not Friday."* It is always true, regardless of whether today is Friday. So it is a **tautology**.
 
@@ -533,7 +522,7 @@ Let `p`: Today is Friday. The statement is *"Today is Friday, or today is not Fr
 | T | F | **T** |
 | F | T | **T** |
 
-### Slide 28: Contradiction (always false): `p ∧ ¬p`
+### Contradiction (always false): `p ∧ ¬p`
 
 Let `p`: Today is Friday. The statement is *"Today is Friday, **and** today is not Friday."* It is always false because today cannot be Friday and not Friday at the same time. So it is a **contradiction**.
 
@@ -542,7 +531,7 @@ Let `p`: Today is Friday. The statement is *"Today is Friday, **and** today is n
 | T | F | **F** |
 | F | T | **F** |
 
-### Slide 29: Contingency (sometimes true, sometimes false): `p ∧ q`
+### Contingency (sometimes true, sometimes false): `p ∧ q`
 
 Let `p`: Today is Friday, `q`: It is raining. The statement is *"Today is Friday, and it is raining."* It can be true or false depending on the truth values of `p` and `q`. So it is a **contingency**: true in one case and false in the others.
 
@@ -553,7 +542,7 @@ Let `p`: Today is Friday, `q`: It is raining. The statement is *"Today is Friday
 | F | T | **F** |
 | F | F | **F** |
 
-### Slide 30: Another contingency, this time with OR: `p ∨ q`
+### Another contingency, this time with OR: `p ∨ q`
 
 Let `p`: Today is Friday, `q`: It is raining. Statement: *"Today is Friday, or it is raining."*
 
@@ -596,13 +585,11 @@ Let `p`: Today is Friday, `q`: It is raining. Statement: *"Today is Friday, or i
 
 ## 📐 5. Logic Laws
 
-📺 **Slides 32–35**
-
 Logic laws are used to **reduce complex formulas or statements into a simpler form**. They are crucial in mathematics, computer science and philosophy for analysing and solving logical problems.
 
-### The Laws of Logic (slide 33)
+### The Laws of Logic
 
-On the slide, **`t`** stands for a **tautology** (a statement that is always TRUE) and **`c`** stands for a **contradiction** (a statement that is always FALSE).
+In the lecture, **`t`** stands for a **tautology** (a statement that is always TRUE) and **`c`** stands for a **contradiction** (a statement that is always FALSE).
 
 | # | Law | Equivalence |
 |:-:|---|---|
@@ -634,7 +621,7 @@ Group them by what they do instead of memorising nine separate laws:
 - **Distributive:** it works **both ways**. `∧` distributes over `∨`, and `∨` distributes over `∧`. (Ordinary arithmetic only has one: `×` over `+`.)
 - **Absorption:** `p ∨ (p ∧ q) ⇔ p` because if `p` is true the whole thing is true, and if `p` is false then `p ∧ q` is also false. The `q` never matters.
 
-### ✏️ Slide 34: simplify `¬(¬p ∧ q) ∧ (p ∨ q)`
+### ✏️ Simplify `¬(¬p ∧ q) ∧ (p ∨ q)`
 
 **Solution from the lecture, with each step explained:**
 
@@ -648,7 +635,7 @@ Group them by what they do instead of memorising nine separate laws:
 | 5 | `p ∨ c`  (i.e. `p ∨ F`) | **Negation law** | `q ∧ ¬q` is a contradiction `c` (false) |
 | 6 | `p` | **Identity law** | `p ∨ F = p` |
 
-**Notes from the slide**
+**Notes from the lecture**
 
 - AND: `q ∧ ¬q = F`, because both cannot be true.
 - OR: `q ∨ ¬q = T`, because at least one must be true.
@@ -656,7 +643,7 @@ Group them by what they do instead of memorising nine separate laws:
 
 **Final answer: `p`**
 
-### Slide 35: why the identity laws work
+### Why the identity laws work
 
 The result is always the same as `p`.
 
@@ -719,7 +706,7 @@ This is why Modus Ponens works: if `p` and `p → q` are both true, then `q` is 
 
 > ✅ **Checking your answer:** plug in values or build a truth table. If the last columns of the original and simplified forms match, you are right.
 
-### 📎 Laws that are not on the slide but are handy
+### 📎 Laws that are not in the lecture but are handy
 
 | Law | Equivalence |
 |---|---|
@@ -728,13 +715,11 @@ This is why Modus Ponens works: if `p` and `p → q` are both true, then `q` is 
 | **Contrapositive** | `p → q ≡ ¬q → ¬p` |
 | **Biconditional** | `p ↔ q ≡ (p → q) ∧ (q → p)` |
 
-The implication and biconditional rules reappear on the "5 most important rules" slide in section 7.
+The implication and biconditional rules reappear in the "5 most important rules" table in section 7.
 
 ---
 
 ## 🧠 6. Rules of Inference
-
-📺 **Slides 36–40**
 
 Rules of inference let us derive a **valid conclusion** from given statements (premises).
 
@@ -750,7 +735,7 @@ The lecture covers **4 rules**:
 | 3 | **Elimination** (disjunctive syllogism) | `p ∨ q`, `¬p` ∴ `q` | Either p or q is true. p is not true, so q is true. |
 | 4 | **Transitivity** | `p → q`, `q → r` ∴ `p → r` | A chain of if-thens joins up. |
 
-### Rule 1: Modus Ponens (slide 36)
+### Rule 1: Modus Ponens
 
 ```
 p → q
@@ -764,7 +749,7 @@ p
 
 Memory trick: *ponens* = you **affirm** `p` (the first part) to get `q`.
 
-### Rule 2: Modus Tollens (slide 36)
+### Rule 2: Modus Tollens
 
 ```
 p → q
@@ -778,7 +763,7 @@ p → q
 
 Memory trick: *tollens* = you **deny** `q` (the second part) to get `¬p`. It is the contrapositive in action: `p → q` is the same as `¬q → ¬p`.
 
-### Rule 3: Elimination, also called Disjunctive Syllogism (slide 36)
+### Rule 3: Elimination, also called Disjunctive Syllogism
 
 ```
 p ∨ q
@@ -790,9 +775,9 @@ p ∨ q
 *Amin is not in the library.*
 *So he must be in the cafe.*
 
-It also works the other way round: `p ∨ q`, `¬q` ∴ `p`. You **eliminate** the false side and the other must be true. (The handwritten note on the slide shows this: "or ¬q ∴ p".)
+It also works the other way round: `p ∨ q`, `¬q` ∴ `p`. You **eliminate** the false side and the other must be true. (The handwritten note in the lecture shows this: "or ¬q ∴ p".)
 
-### Rule 4: Transitivity (slide 36)
+### Rule 4: Transitivity
 
 ```
 p → q
@@ -817,7 +802,7 @@ The middle statement `q` appears in both premises and drops out, like a chain li
 | An **or** and one side is stated as **false** | **Elimination** |
 | **Two if-thens** where the "then" of one is the "if" of the other | **Transitivity** |
 
-### ✏️ Slide 37: recognising Modus Ponens and Modus Tollens
+### ✏️ Recognising Modus Ponens and Modus Tollens
 
 Fill in the blank line in each argument, and name the rule.
 
@@ -846,7 +831,7 @@ These three missing lines are exactly the three statements in my lecture notes (
 
 </details>
 
-### ✏️ Slide 38: identify the rule of inference
+### ✏️ Identify the rule of inference
 
 a) If Anisah's father is Ahmad then Anisah could be my sister.
    **Anisah is not my sister, therefore her father is not Ahmad.
@@ -882,11 +867,11 @@ Step by step for a):
 
 </details>
 
-### Slide 39: where inference rules are used
+### Where inference rules are used
 
 These rules are foundational in logical reasoning and are widely used in **mathematics, philosophy and computer science**. In computer science, **modus ponens, modus tollens, disjunctive syllogism and transitivity** are frequently applied in **algorithms, formal verification and logic programming**.
 
-### Slide 40: Modus Ponens in programming
+### Modus Ponens in programming
 
 ```python
 age = 20
@@ -960,11 +945,9 @@ Transitivity is also called **Hypothetical Syllogism** in many textbooks. The le
 
 ## 🚫 7. Negation in Logic
 
-📺 **Slides 41–47**
-
 **Negation** is a fundamental operation in logic, used to express the **opposite (or denial)** of a statement. The symbol for negation is **`~` or `¬`**, and it is applied to propositions or statements.
 
-### Slide 42: simple and compound statements
+### Simple and compound statements
 
 **1. Negation of a simple statement.** For a simple statement `p`:
 
@@ -988,7 +971,7 @@ Example:
 - Statement: "I am studying **and** it is raining."
 - Negation: "I am not studying **or** it is not raining."
 
-### Slide 43: disjunction and conditional
+### Disjunction and conditional
 
 **b. Negation of a disjunction (OR, `∨`)**
 
@@ -1016,7 +999,7 @@ Example:
 - Statement: "If it rains, then I will stay home."
 - Negation: "It rains, **and** I do not stay home."
 
-### Slide 44: biconditional
+### Biconditional
 
 **d. Negation of a biconditional statement (IF AND ONLY IF, `p ↔ q`)**
 
@@ -1031,7 +1014,7 @@ Example:
 - Statement: "I will attend the meeting if and only if my friends attend."
 - Negation: "I attend the meeting and my friends do not attend, **or** I do not attend the meeting and my friends attend the meeting."
 
-### Slide 45: summary table of negation rules
+### Summary table of negation rules
 
 | Original statement | Negation |
 |---|---|
@@ -1041,7 +1024,7 @@ Example:
 | `p → q` | `p ∧ ¬q` |
 | `p ↔ q` | `(p ∧ ¬q) ∨ (¬p ∧ q)` |
 
-### Slide 46: "The 5 most important rules"
+### "The 5 most important rules"
 
 | # | Rule | Formula |
 |:-:|---|---|
@@ -1051,7 +1034,7 @@ Example:
 | 4 | De Morgan's AND rule | `¬(p ∧ q) ≡ ¬p ∨ ¬q` |
 | 5 | De Morgan's OR rule | `¬(p ∨ q) ≡ ¬p ∧ ¬q` |
 
-### Slide 47: "If and only if" rules
+### "If and only if" rules
 
 | Rule | Formula |
 |---|---|
@@ -1096,7 +1079,7 @@ Example:
 
 | Wrong | Why it is wrong | Right |
 |---|---|---|
-| `¬(p ∧ q) = ¬p ∧ ¬q` | This is exactly slide 24 question 1: the tables differ in rows 2 and 3 | `¬p ∨ ¬q` |
+| `¬(p ∧ q) = ¬p ∧ ¬q` | This is exactly the first example question in section 3: the tables differ in rows 2 and 3 | `¬p ∨ ¬q` |
 | "If it rains then I will **not** stay home" as the negation of "If it rains then I will stay home" | An if-then is not negated by another if-then | "It rains **and** I do not stay home" |
 | Forgetting to flip `∧`/`∨` | De Morgan always swaps them | Break the line, change the sign |
 
@@ -1104,9 +1087,9 @@ Example:
 
 ## 📝 8. Practice Questions
 
-Try each one first, then open the answer. Questions marked 📺 come straight from the slides.
+Try each one first, then open the answer.
 
-**Q1.** 📺 *(slide 13)* Which of these is **not** a proposition? (a) "Come to class!!" (b) "7 is prime." (c) "x > 10." (d) "3 + 4 = 8."
+**Q1.** Which of these is **not** a proposition? (a) "Come to class!!" (b) "7 is prime." (c) "x > 10." (d) "3 + 4 = 8."
 
 <details>
 <summary>Answer</summary>
@@ -1135,7 +1118,7 @@ Try each one first, then open the answer. Questions marked 📺 come straight fr
 
 </details>
 
-**Q4.** 📺 *(slide 22)* Which truth table is correct for `¬p ∨ q`?
+**Q4.** Which truth table is correct for `¬p ∨ q`?
 
 <details>
 <summary>Answer</summary>
@@ -1180,7 +1163,7 @@ It is a contingency (a mix of T and F).
 
 </details>
 
-**Q7.** 📺 *(slide 25 style)* Given `P` = It is raining, `Q` = the grass is wet, write: (a) "If it is raining then the grass is wet." (b) "It is not raining or the grass is not wet." (c) "The grass is wet if and only if it is raining."
+**Q7.** Given `P` = It is raining, `Q` = the grass is wet, write: (a) "If it is raining then the grass is wet." (b) "It is not raining or the grass is not wet." (c) "The grass is wet if and only if it is raining."
 
 <details>
 <summary>Answer</summary>
@@ -1212,7 +1195,7 @@ It is a contingency (a mix of T and F).
 
 </details>
 
-**Q10.** 📺 *(slide 34 style)* Simplify `p ∨ (¬p ∧ q)`.
+**Q10.** Simplify `p ∨ (¬p ∧ q)`.
 
 <details>
 <summary>Answer</summary>
@@ -1237,7 +1220,7 @@ It is a contingency (a mix of T and F).
 
 </details>
 
-**Q12.** 📺 *(slides 36–38 style)* Name the rule, or say it is invalid:
+**Q12.** Name the rule, or say it is invalid:
 (a) If I study, I pass. I did not pass. ∴ I did not study.
 (b) It is at home or at the mamak. It is not at home. ∴ It is at the mamak.
 (c) If I study, I pass. I passed. ∴ I studied.
@@ -1286,7 +1269,7 @@ It is a contingency (a mix of T and F).
 
 </details>
 
-**Q15.** 📺 *(slides 42–44 style)* Write the negation of each: (a) "I will eat rice and drink tea." (b) "The server is down or the network is slow." (c) "If you score 80, then you get a scholarship." (d) "You can log in if and only if your password is correct."
+**Q15.** Write the negation of each: (a) "I will eat rice and drink tea." (b) "The server is down or the network is slow." (c) "If you score 80, then you get a scholarship." (d) "You can log in if and only if your password is correct."
 
 <details>
 <summary>Answer</summary>
