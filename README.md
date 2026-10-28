@@ -1,9 +1,5 @@
 # 🧮 Discrete Mathematics: Chapter 1 Logic
 
-Full notes for **Chapter 1: Logic** (lecture file `LECTURE_CHAPTER_1`, 48 slides). Every slide is covered, in order, with the lecturer's examples, the answers, and extra explanation so each idea can be understood and used in the test.
-
-Each section is tagged with the slides it comes from, like 📺 **Slides 6–14**.
-
 ## 📑 Table of Contents
 
 0. [Chapter Overview](#-0-chapter-overview)
